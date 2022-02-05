@@ -8,10 +8,11 @@ import {
     Twitter,
   } from "@material-ui/icons";
   import styled from "styled-components";
+  import { mobile } from "../responsive";
     
   const Container = styled.div`
     display: flex;
-
+    ${mobile({ flexDirection: "column" })}
   `;
   
   const Left = styled.div`
@@ -45,7 +46,8 @@ import {
   
   const Center = styled.div`
     flex: 1;
-    padding: 20px;}
+    padding: 20px;
+    ${mobile({ display: "none" })}
   `;
   
   const Title = styled.h3`
@@ -68,6 +70,7 @@ import {
   const Right = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({ backgroundColor: "#fff8f8" })}
   
   `;
   
@@ -112,11 +115,10 @@ import {
             <ListItem>Home</ListItem>
             <ListItem>Cart</ListItem>
             <ListItem>MEDICNE</ListItem>
-            <ListItem>MEEDICAL ITEMS</ListItem>
+            <ListItem>MEDICAL ITEMS</ListItem>
             <ListItem>Accessories</ListItem>
             <ListItem>My Account</ListItem>
             <ListItem>Order Tracking</ListItem>
-            <ListItem>Wishlist</ListItem>
             <ListItem>Wishlist</ListItem>
             <ListItem>Terms</ListItem>
           </List>
