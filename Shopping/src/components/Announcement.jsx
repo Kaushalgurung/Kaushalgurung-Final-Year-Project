@@ -5,15 +5,16 @@ const Container = styled.div`
     background-color: black;
     color: white;
     margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
 `;
-const Deal = styled.div`
-    margin-left: 800px;
-    display: flex; 
-`
 const Announcement = () => {
     return (
         <Container>
-            <Deal>Deal! Free Delivery on order over Rs.5000 </Deal>
+Deal! Free Delivery on order over Rs.5000 
         </Container>
     )
 }

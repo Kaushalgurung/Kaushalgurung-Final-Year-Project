@@ -30,16 +30,19 @@ export const sliderItems = [
       id: 1,
       img: "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       title: "MEDICNE",
+      catagory:"medicne"
     },
     {
       id: 2,
       img: "https://content.instructables.com/ORIG/FRD/YDF2/I0R0VYWO/FRDYDF2I0R0VYWO.jpg?auto=webp&fit=bounds&frame=1&height=1024&width=1024",
       title: "MEDICAL ITEMS",
+      catagory:"medical item"
     },
     {
       id: 3,
       img: "https://vitalrecord.tamhsc.edu/wp-content/uploads/2019/01/meds.jpg",
       title: "PRESCRIBED ITEMS",
+      catagory:"prescribed item"
     },
   ];
 

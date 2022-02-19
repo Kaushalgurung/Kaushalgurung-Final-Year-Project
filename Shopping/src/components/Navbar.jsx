@@ -1,8 +1,11 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons"
 import React from 'react'
+import { useSelector } from "react-redux";
 import styled from 'styled-components'
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+import Cart from "../pages/Cart";
 
 const Container = styled.div`
     height: 60px;
@@ -53,7 +56,7 @@ const Right =styled.div`
     justify-content: flex-end;
     ${mobile({ flex: 2, justifyContent: "center" })}
 `;
-const MenueItem =styled.div`
+const MenuItem =styled.div`
     font-size: 14px;
     cursor: pointer;
     margin-left: 25px;
@@ -64,6 +67,7 @@ const MenueItem =styled.div`
 
 
 const Navbar = () => {
+    const quantity = useSelector(state=> state.quantity)
     return (
         <Container style={{background:"teal"}}>
             <Wrapper>
@@ -73,16 +77,18 @@ const Navbar = () => {
                     <Search style={{color:"none", fontSize:25}}/> 
                 </SearchContaioner>
                 </Left>
-                <Center><Logo> औशधि पसल</Logo></Center>
+                <Center><Logo> <Link to="/">औशधि पसल</Link></Logo></Center>
                 <Right>
-                    <MenueItem>Register</MenueItem>
-                    <MenueItem>Sign-In</MenueItem>
-                    <MenueItem> 
-                        <Badge badgeContent={4} color="primary">
-                        <ShoppingCartOutlined />
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>SIGN IN</MenuItem>
+                    <Link to="/cart">
+                    <MenuItem>
+                        <Badge badgeContent={quantity} color="primary">
+                            <ShoppingCartOutlined />
                         </Badge>
-                    </MenueItem>
-                </Right>
+                    </MenuItem>
+                    </Link>
+        </Right>
             </Wrapper>
         </Container>
     )
