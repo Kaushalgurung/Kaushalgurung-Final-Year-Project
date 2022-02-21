@@ -75,8 +75,8 @@ const ProductList = () => {
             <Option disabled>
               Catagory
             </Option>
-            <Option>XS</Option>
-            <Option>S</Option>
+            <Option>Medical-items</Option>
+            <Option></Option>
             <Option>M</Option>
             <Option>L</Option>
             <Option>XL</Option>

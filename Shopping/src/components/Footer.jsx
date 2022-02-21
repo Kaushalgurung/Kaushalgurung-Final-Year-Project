@@ -114,11 +114,10 @@ import {
           <List>
             <ListItem>Home</ListItem>
             <ListItem>Cart</ListItem>
-            <ListItem>MEDICNE</ListItem>
-            <ListItem>MEDICAL ITEMS</ListItem>
+            <ListItem>Medicine</ListItem>
+            <ListItem>Medical Items</ListItem>
             <ListItem>Accessories</ListItem>
             <ListItem>My Account</ListItem>
-            <ListItem>Order Tracking</ListItem>
             <ListItem>Wishlist</ListItem>
             <ListItem>Terms</ListItem>
           </List>
