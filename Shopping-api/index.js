@@ -8,7 +8,14 @@ const authRoute = require("./routes/auth");
 const productRoute = require("./routes/product");
 const cartRouet = require("./routes/cart");
 const orderRoute = require("./routes/order");
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
 
+app.use(cors(corsOptions)) // Use this after the variable declaration
 mongoose
 .connect(
     process.env.MONGO_URL

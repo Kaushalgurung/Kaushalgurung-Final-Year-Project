@@ -5,7 +5,7 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 30vh;
-  background-color: #fcf5f5;
+  background-image: linear-gradient(to right bottom, #09326f, #324389, #5254a3, #7265bc, #9477d6);
   display: flex;
   align-items: center;
   justify-content: center;

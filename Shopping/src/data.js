@@ -36,13 +36,13 @@ export const sliderItems = [
       id: 2,
       img: "https://content.instructables.com/ORIG/FRD/YDF2/I0R0VYWO/FRDYDF2I0R0VYWO.jpg?auto=webp&fit=bounds&frame=1&height=1024&width=1024",
       title: "MEDICAL ITEMS",
-      catagory:"medical-items"
+      catagory:"MEDICAL-ITEMS"
     },
     {
       id: 3,
       img: "https://vitalrecord.tamhsc.edu/wp-content/uploads/2019/01/meds.jpg",
       title: "PRESCRIBED ITEMS",
-      catagory:"prescribed-items"
+      catagory:"PRESCRIBED-ITEMS"
     },
     {
       id: 4,

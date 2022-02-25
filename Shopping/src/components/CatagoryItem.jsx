@@ -3,15 +3,16 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin: 3px;
-  height: 70vh;
+  height: 50vh;
   position: relative;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
   ${mobile({ height: "20vh" })}
 `;
@@ -29,7 +30,7 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-    color:white;
+    color:black;
     margin-bottom: 20px;
 `;
 

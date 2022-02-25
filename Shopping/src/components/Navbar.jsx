@@ -9,6 +9,7 @@ import Cart from "../pages/Cart";
 
 const Container = styled.div`
     height: 60px;
+    background-image: radial-gradient(circle, #52dea1, #00d4c7, #00c6ea, #00b3ff, #009bff, #009dff, #009eff, #00a0ff, #00bcff, #00d3f8, #00e6d1, #04f49f);
     ${mobile({ height: "50px" })}
 `;
 const Wrapper =styled.div`
@@ -69,7 +70,7 @@ const MenuItem =styled.div`
 const Navbar = () => {
     const quantity = useSelector(state=> state.quantity)
     return (
-        <Container style={{background:"teal"}}>
+        <Container>
             <Wrapper>
                 <Left><Language> English</Language>
                 <SearchContaioner>

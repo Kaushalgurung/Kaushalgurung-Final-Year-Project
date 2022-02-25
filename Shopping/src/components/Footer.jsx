@@ -12,6 +12,7 @@ import {
     
   const Container = styled.div`
     display: flex;
+    background-image: radial-gradient(circle, #52dede, #63e1d8, #73e4d3, #82e7ce, #91e9ca, #94eacc, #98eacf, #9bebd1, #97ead8, #96e9df, #96e7e4, #98e5e9);
     ${mobile({ flexDirection: "column" })}
   `;
   
