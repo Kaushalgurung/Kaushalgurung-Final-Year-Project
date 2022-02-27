@@ -14,7 +14,7 @@ const Container = styled.div`
 const Products = ({catagory, filters, sort}) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-
+  console.log(catagory, filters, sort);
   useEffect(() => {
     const getProducts = async () => {
       try {

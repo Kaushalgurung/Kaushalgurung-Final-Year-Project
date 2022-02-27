@@ -28,7 +28,7 @@ import {
   
   const Container = styled.div`
     flex: 1;
-    margin: 5px;
+    margin: 25px;
     min-width: 280px;
     height: 350px;
     display: flex;
@@ -53,6 +53,8 @@ import {
   const Image = styled.img`
     height: 75%;
     z-index: 2;
+    align-items: center;
+    justify-content: center;
   `;
   
   const Icon = styled.div`
@@ -70,10 +72,23 @@ import {
       transform: scale(1.1);
     }
   `;
-  
+  const Title = styled.h1`
+  margin: 5px;
+  weight: bold;
+  font-size: 20px;
+`;
+const Cat = styled.div`
+  display: flex;
+  flex: 1;
+    margin: 5px;
+    min-width: 280px;
+    height: 350px;
+`;
+
   const Product = ({ item }) => {
     return (
       <Container>
+        <Cat>
       <Circle />
       <Image src={item.img} />
       <Info>
@@ -89,6 +104,7 @@ import {
           <FavoriteBorderOutlined />
         </Icon>
       </Info>
+      </Cat>
     </Container>
     );
   };

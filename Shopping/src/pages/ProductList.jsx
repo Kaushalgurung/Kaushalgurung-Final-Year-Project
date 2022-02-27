@@ -52,6 +52,7 @@ const ProductList = () => {
     });
   };
 
+  console.log(filters)
   return (
     <Container>
       <Navbar />
@@ -60,26 +61,27 @@ const ProductList = () => {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          <Select name="item" onChange={handleFilters}>
-            <Option disabled>
-              Item
-            </Option>
-            <Option>White</Option>
-            <Option>Black</Option>
-            <Option>Red</Option>
-            <Option>Blue</Option>
-            <Option>Yellow</Option>
-            <Option>Green</Option>
-          </Select>
           <Select name="catagory" onChange={handleFilters}>
             <Option disabled>
-              Catagory
+              Item-Catagory
             </Option>
-            <Option>Medical-items</Option>
-            <Option></Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
+            <Option>Covid-Essentials</Option>
+            <Option>Healthcare-Devices</Option>
+            <Option>Health-Food-and-Drinks</Option>
+            <Option>Personal-Care</Option>
+            <Option>Ayurvedic-Care</Option>
+            <Option>Medical-Supplements</Option>
+            <Option>Mother-and-Baby-Care</Option>
+            <Option>Accessories-and-Wearables</Option>
+            <Option>Skin-Care</Option>
+            <Option>Diabetic-Care</Option>
+            <Option>Health-Condition</Option>
+            <Option>Sexual-Wellness</Option>
+            <Option>Home-Care</Option>
+            <Option>Fitness-and-Supplements</Option>
+            <Option>Elderly-Care</Option>
+            <Option>Surgicals-and-Dressings</Option>
+            <Option>Pet-Care</Option>
           </Select>
         </Filter>
         <Filter>

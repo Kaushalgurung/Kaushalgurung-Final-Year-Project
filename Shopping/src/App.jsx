@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
+import Chat from "./pages/Chat";
 import { useSelector } from "react-redux";
 import {
   BrowserRouter,
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={user ? <Navigate to="/" /> : <Login />}/>
           <Route path="/register" element={user ? <Navigate to="/" /> : <Register />}/>
+          <Route path="/chat" element={<Chat />} />
         </Routes> 
     </BrowserRouter>
   );
