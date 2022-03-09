@@ -8,6 +8,7 @@ import { mobile } from "../responsive";
 import { useLocation } from "react-router";
 import { useState } from "react";
 
+
 const Container = styled.div``;
 
 const Title = styled.h1`
@@ -93,7 +94,7 @@ const ProductList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products catagoryt={catagory} filters={filters} sort={sort} />
+      <Products catagory={catagory} filters={filters} sort={sort} />
       <Newsletter />
       <Footer />
     </Container>

@@ -9,7 +9,7 @@ import Cart from "../pages/Cart";
 
 const Container = styled.div`
     height: 60px;
-    background-image: radial-gradient(circle, #52dea1, #00d4c7, #00c6ea, #00b3ff, #009bff, #009dff, #009eff, #00a0ff, #00bcff, #00d3f8, #00e6d1, #04f49f);
+    background-image: linear-gradient(to right bottom, #09326f, #324389, #5254a3, #7265bc, #9477d6);
     ${mobile({ height: "50px" })}
 `;
 const Wrapper =styled.div`
@@ -64,11 +64,8 @@ const MenuItem =styled.div`
     ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `
 
-
-
-
 const Navbar = () => {
-    const quantity = useSelector(state=> state.quantity)
+    const quantity = useSelector(state=> state.cart.quantity)
     return (
         <Container>
             <Wrapper>

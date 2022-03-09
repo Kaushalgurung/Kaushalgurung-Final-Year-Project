@@ -3,13 +3,23 @@ import { popularProducts } from "../data";
 import Product from "./Product";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
     padding: 20px;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    ${mobile({ padding: "0px", flexDirection:"column" })}
 `;
+const Title = styled.h1`
+  margin: 15px;
+  weight: bold;
+  font-size: 20px;
+`;
+const Pro = styled.div`
+display: flex;
+${mobile({ padding: "0px", flexDirection:"column" })}
+`
 
 const Products = ({catagory, filters, sort}) => {
   const [products, setProducts] = useState([]);
@@ -59,11 +69,13 @@ const Products = ({catagory, filters, sort}) => {
 
   return (
     <Container>
-      {catagory
+      <Title>Products:</Title>
+      <Pro>{catagory
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
         : products
             .slice(0, 8)
             .map((item) => <Product item={item} key={item.id} />)}
+            </Pro>
     </Container>
   );
 };
