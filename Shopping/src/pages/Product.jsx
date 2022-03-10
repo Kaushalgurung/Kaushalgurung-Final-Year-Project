@@ -66,27 +66,27 @@ const FilterContainer = styled.div`
   ${mobile({ width: "100%" })}
 `;
 
-const Filter = styled.div`
-  display: flex;
-  align-items: center;
-`;
+// const Filter = styled.div`
+//   display: flex;
+//   align-items: center;
+// `;
 
-const FilterTitle = styled.span`
-  font-size: 20px;
-  font-weight: 200;
-`;
+// const FilterTitle = styled.span`
+//   font-size: 20px;
+//   font-weight: 200;
+// `;
 
-const FilterCatagory = styled.div`
-  width: 20px;
-  height: 20px;
-`;
+// const FilterCatagory = styled.div`
+//   width: 20px;
+//   height: 20px;
+// `;
 
-const FilterSize = styled.select`
-  margin-left: 10px;
-  padding: 5px;
-`;
+// const FilterSize = styled.select`
+//   margin-left: 10px;
+//   padding: 5px;
+// `;
 
-const FilterSizeOption = styled.option``;
+// const FilterSizeOption = styled.option``;
 
 const AddContainer = styled.div`
   width: 50%;
@@ -129,7 +129,6 @@ const Product = () => {
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
-  const [catagory, setCatagory] = useState("");
   const dispatch = useDispatch();
 
   useEffect(() => {
