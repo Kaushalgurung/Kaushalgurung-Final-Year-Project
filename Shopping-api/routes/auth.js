@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 
 //register
 
+/* Creating a new user. */
 router.post("/register", async (req,res )=> {
     const newUser = new User({
         username: req.body.username,
@@ -25,6 +26,7 @@ router.post("/register", async (req,res )=> {
 //login
 router.post("/login", async (req,res)=>{
     try {
+        /* This code is checking if the user exists and if the password is correct. */
         const user = await User.findOne({ username: req.body.username });
         !user && res.status(401).json("No user name! or Incorrect Username!");
 

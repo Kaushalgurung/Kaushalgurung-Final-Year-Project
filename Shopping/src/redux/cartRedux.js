@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+/* It creates a slice of the cart reducer. */
 const cartSlice = createSlice({
   name: "cart",
   initialState: {

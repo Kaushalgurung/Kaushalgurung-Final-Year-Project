@@ -8,6 +8,7 @@ const {
 const router = require("express").Router();
 
 //Update
+/* Updating a user by id. */
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
   if (req.body.password) {
     req.body.password = CryptoJS.AES.encrypt(
@@ -31,6 +32,7 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
 });
 
 //Delete
+/* This is a delete route. It will delete a user by id. */
 router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
@@ -41,6 +43,7 @@ router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
 });
 
 //Get User
+/* This is a query to get a user by id. */
 router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
@@ -52,6 +55,8 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //Get All User
+/* This is a query to get all the users. If the query parameter `new` is passed, it will return the
+last 5 users created. */
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
   const query = req.query.new;
   try {
@@ -66,6 +71,7 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
 
 //Get User Stats
 
+/* A query to get the number of users created in each month. */
 router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
   const date = new Date();
   const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));

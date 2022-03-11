@@ -1,5 +1,12 @@
 const jwt = require("jsonwebtoken");
 
+/**
+ * Verify that the token is valid and if so, pass the user object to the next middleware
+ * @param req - The request object.
+ * @param res - The response object.
+ * @param next - The next function in the middleware chain.
+ * @returns The user object is being returned.
+ */
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers.token;
   if (authHeader) {
@@ -14,6 +21,13 @@ const verifyToken = (req, res, next) => {
   }
 };
 
+/**
+ * If the user is not the same as the user in the URL or the user is an admin, then the user is allowed
+ * to proceed. Otherwise, the user is not allowed to proceed
+ * @param req - The request object.
+ * @param res - The response object.
+ * @param next - a function that will be called if the token is valid.
+ */
 const verifyTokenAndAuthorization = (req, res, next) => {
   verifyToken(req, res, () => {
     if (req.user.id === req.params.id || req.user.isAdmin) {
@@ -24,6 +38,12 @@ const verifyTokenAndAuthorization = (req, res, next) => {
   });
 };
 
+/**
+ * If the user is an admin, continue on to the next middleware. Otherwise, return a 403 error
+ * @param req - The request object.
+ * @param res - The response object.
+ * @param next - a callback function that will be executed after the token is verified.
+ */
 const verifyTokenAndAdmin = (req, res, next) => {
   verifyToken(req, res, () => {
     if (req.user.isAdmin) {

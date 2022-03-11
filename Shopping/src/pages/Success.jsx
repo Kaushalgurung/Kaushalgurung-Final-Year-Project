@@ -10,6 +10,8 @@ const Success = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
   const [orderId, setOrderId] = useState(null);
 
+/* This is a side effect. It is a function that runs after the component is mounted. It is used to make
+an API call to create an order. */
   useEffect(() => {
     const createOrder = async () => {
       try {

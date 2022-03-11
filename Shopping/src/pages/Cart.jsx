@@ -160,6 +160,7 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
+/* This is a useEffect hook that makes a request to the server to create a payment intent. */
 const Cart = () => {
    const cart = useSelector((state) => state.cart);
    const [stripeToken, setStripeToken] = useState(null);
@@ -168,6 +169,7 @@ const Cart = () => {
    const onToken = (token) => {
     setStripeToken(token);
   };
+/* This is a useEffect hook that makes a request to the server to create a payment intent. */
   useEffect(() => {
     const makeRequest = async () => {
       try {

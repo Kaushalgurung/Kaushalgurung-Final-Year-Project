@@ -9,6 +9,7 @@ const router = require("express").Router();
 
 //CREATE
 
+/* This is a POST request that creates a new product. */
 router.post("/", verifyTokenAndAdmin, async (req, res) => {
   const newProduct = new Product(req.body);
 
@@ -21,6 +22,7 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //UPDATE
+/* This is a PUT request that finds a single product by its id and updates it. */
 router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
@@ -37,6 +39,7 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //DELETE
+/* This is a delete request that finds a single product by its id and deletes it. */
 router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.id);
@@ -47,6 +50,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //GET PRODUCT
+/* This is a GET request that finds a single product by its id. */
 router.get("/find/:id", async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
@@ -57,6 +61,9 @@ router.get("/find/:id", async (req, res) => {
 });
 
 //GET ALL PRODUCTS
+/* A query to find all products. If the query parameter `new` is passed, it will find the most recently
+created product. If the query parameter `category` is passed, it will find all products with the
+specified category. If no query parameter is passed, it will find all products. */
 router.get("/", async (req, res) => {
   const qNew = req.query.new;
   const qCategory = req.query.category;

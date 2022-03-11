@@ -9,6 +9,7 @@ const router = require("express").Router();
 
 //CREATE
 
+/* This is a POST request that creates a new order. */
 router.post("/", verifyToken, async (req, res) => {
   const newOrder = new Order(req.body);
 
@@ -21,6 +22,7 @@ router.post("/", verifyToken, async (req, res) => {
 });
 
 //UPDATE
+/* This is a PUT request that updates a specific order. */
 router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
     const updatedOrder = await Order.findByIdAndUpdate(
@@ -37,6 +39,7 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //DELETE
+/* This is a DELETE request that deletes a specific order. */
 router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
     await Order.findByIdAndDelete(req.params.id);
@@ -47,6 +50,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //GET USER ORDERS
+/* This is a GET request that returns all orders for a specific user. */
 router.get("/find/:userId", verifyTokenAndAuthorization, async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.params.userId });
@@ -58,6 +62,7 @@ router.get("/find/:userId", verifyTokenAndAuthorization, async (req, res) => {
 
 // //GET ALL
 
+/* This is a GET request that returns all orders. */
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
   try {
     const orders = await Order.find();
@@ -69,6 +74,7 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
 
 // GET MONTHLY INCOME
 
+/* This is a GET request that returns total sales. */
 router.get("/income", verifyTokenAndAdmin, async (req, res) => {
   const date = new Date();
   const lastMonth = new Date(date.setMonth(date.getMonth() - 1));

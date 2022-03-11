@@ -72,6 +72,9 @@ const Login = () => {
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
 
+/**
+ * When the user clicks the login button, the login function is called with the username and password
+ */
   const handleClick = (e) => {
     e.preventDefault();
     login(dispatch, { username, password });

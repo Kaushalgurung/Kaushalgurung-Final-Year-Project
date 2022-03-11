@@ -131,6 +131,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
+/* This is a React Hook that runs the function `getProduct` when the component mounts. */
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -141,6 +142,12 @@ const Product = () => {
     getProduct();
   }, [id]);
 
+/**
+ * * If the type is "dec" and the quantity is greater than 1, then subtract 1 from the quantity.
+ * * If the type is "inc" and the quantity is less than 10, then add 1 to the quantity.
+ * * If the type is "dec" and the quantity is 1, then set the quantity to 1.
+ * * If the type is "inc" and the quantity is 10, then set the quantity to 10
+ */
   const handleQuantity = (type) => {
     if (type === "dec") {
       quantity > 1 && setQuantity(quantity - 1);
@@ -149,6 +156,10 @@ const Product = () => {
     }
   };
 
+/**
+ * When the user clicks the "Add to Cart" button, the function will dispatch an action to add the
+ * product to the cart
+ */
   const handleClick = () => {
     dispatch(
       addProduct({ ...product, quantity })

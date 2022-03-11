@@ -9,6 +9,7 @@ const router = require("express").Router();
 
 //CREATE
 
+/* This is creating a new cart. */
 router.post("/", verifyToken, async (req, res) => {
   const newCart = new Cart(req.body);
 
@@ -21,6 +22,7 @@ router.post("/", verifyToken, async (req, res) => {
 });
 
 //UPDATE
+/* This is updating a cart. */
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
   try {
     const updatedCart = await Cart.findByIdAndUpdate(

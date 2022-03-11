@@ -17,6 +17,7 @@ const corsOptions ={
 }
 
 app.use(cors(corsOptions)) // Use this after the variable declaration
+/* This is a middleware function that is used to handle database. */
 mongoose
 .connect(
     process.env.MONGO_URL
@@ -26,6 +27,7 @@ mongoose
 });
 app.use(express.json());
 
+/* This is a middleware function that is used to handle all the routes. */
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
@@ -33,6 +35,7 @@ app.use("/api/carts", cartRouet);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
+/* This is a callback function that is executed when the server is listening. */
 app.listen(process.env.PORT || 5000, () => {
     console.log("Backend server is running.")
 });
