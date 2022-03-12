@@ -8,13 +8,19 @@ import NewUser from "./pages/newUser/newUser";
 import ProductList from "./pages/productList/productList"
 import Product from "./pages/product/product";
 import NewProduct from "./pages/newProduct/newProduct";
+import NewPharmacy from "./pages/newPharmacy/newPharmacy"
+import Pharmacy from "./pages/pharmacy/pharmacy";
+import PharmacyList from "./pages/pharmacyList/pharmacyList";
+import Login from "./pages/login/Login";
+import { useSelector } from "react-redux";
 import {
   BrowserRouter,
   Routes,
-  Route, Navigate
+  Route,
 } from "react-router-dom";
 
 function App() {
+  const admin = true;
   return (
     <BrowserRouter>
       <Topbar />
@@ -27,7 +33,10 @@ function App() {
         <Route path="/newUser" element={<NewUser />} className="link"/>
         <Route path="/products" element={<ProductList />} className="link"/>
         <Route path="/product/:productId" element={<Product />} className="link"/>
-        <Route path="/newproduct" element={<NewProduct />} className="link"/>     
+        <Route path="/newproduct" element={<NewProduct />} className="link"/>
+        <Route path="/newpharmacy" element={<NewPharmacy />} className="link"/>
+        <Route path="/pharmacy/:pharmacyId" element={<Pharmacy />} className="link"/>
+        <Route path="/pharmacys" element={<PharmacyList />} className="link"/>      
           </Routes>
       </div>
     </BrowserRouter>

@@ -54,10 +54,12 @@ export default function Sidebar() {
                 Products
               </li>
               </Link>
+              <Link to= "/pharmacys" className="link">
               <li className="sidebarListItem">
                 <LocalPharmacy className="sidebarIcon" />
                 Pharmacy
               </li>
+              </Link>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions

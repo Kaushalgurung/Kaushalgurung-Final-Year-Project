@@ -63,6 +63,20 @@ export const userData = [
       "Sales": 5000,
     },
   ];
+  export const pharmacyData = [
+    {
+      name: "Jan",
+      "Orders": 4000,
+    },
+    {
+      name: "Feb",
+      "Orders": 3000,
+    },
+    {
+      name: "Mar",
+      "Orders": 5000,
+    },
+  ];
 
   export const userRows = [
     {
@@ -248,4 +262,79 @@ export const userData = [
       status: "instock",
       price: "$1.20",
     },
+  ];
+  export const pharmacyRows = [
+    {
+      id: 1,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    },
+    {
+      id: 2,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    },
+    {
+      id: 3,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    },
+    {
+      id: 4,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    },
+    {
+      id: 5,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    },
+    {
+      id: 6,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    },
+    {
+      id: 7,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    },
+    {
+      id: 8,
+      name: "Nepal Pharmacy",
+      img:
+        "https://th.bing.com/th/id/R.c766db80f1485c58547ee5dd601fd1e9?rik=qADkv2QCj4MMng&pid=ImgRaw&r=0",
+      location: "KTM, Nepal",
+      status: "Open",
+      phone: "045178222",
+    }
+    
   ];
