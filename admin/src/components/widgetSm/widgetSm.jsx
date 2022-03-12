@@ -4,17 +4,17 @@ import { Visibility } from "@material-ui/icons";
 export default function WidgetSm() {
   return (
     <div className="widgetSm">
-      <span className="widgetSmTitle">New Join Members</span>
+      <span className="widgetSmTitle">New Customer</span>
       <ul className="widgetSmList">
         <li className="widgetSmListItem">
           <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://assets3.thrillist.com/v1/image/3055763/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg"
             alt=""
             className="widgetSmImg"
           />
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Dummy user</span>
+            <span className="widgetSmUserTitle">Customer</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -23,13 +23,13 @@ export default function WidgetSm() {
         </li>
         <li className="widgetSmListItem">
           <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://assets3.thrillist.com/v1/image/3055763/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg"
             alt=""
             className="widgetSmImg"
           />
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Dummy user</span>
+            <span className="widgetSmUserTitle">Customer</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -38,13 +38,13 @@ export default function WidgetSm() {
         </li>
         <li className="widgetSmListItem">
           <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://assets3.thrillist.com/v1/image/3055763/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg"
             alt=""
             className="widgetSmImg"
           />
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Dummy user</span>
+            <span className="widgetSmUserTitle">Customer</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -53,13 +53,13 @@ export default function WidgetSm() {
         </li>
         <li className="widgetSmListItem">
           <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://assets3.thrillist.com/v1/image/3055763/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg"
             alt=""
             className="widgetSmImg"
           />
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Dummy user</span>
+            <span className="widgetSmUserTitle">Customer</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -68,13 +68,13 @@ export default function WidgetSm() {
         </li>
         <li className="widgetSmListItem">
           <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://assets3.thrillist.com/v1/image/3055763/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg"
             alt=""
             className="widgetSmImg"
           />
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Dummy user</span>
+            <span className="widgetSmUserTitle">Customer</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />

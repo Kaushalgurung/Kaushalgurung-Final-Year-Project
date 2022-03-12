@@ -6,6 +6,7 @@ import Success from "./pages/Success";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import { useSelector } from "react-redux";
+import "./app.css";
 import {
   BrowserRouter,
   Routes,
