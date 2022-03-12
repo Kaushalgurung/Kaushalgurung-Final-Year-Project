@@ -52,7 +52,7 @@ const Button = styled.button`
   cursor: pointer;
   margin-bottom: 10px;
   &:disabled {
-    color: green;
+    color: red;
     cursor: not-allowed;
 `;
 
@@ -89,7 +89,7 @@ const Login = () => {
             type="password"
             onChange={(e) => setPassword(e.target.value)} />
           <Button onClick={handleClick} disabled={isFetching}>LOGIN</Button>
-          {error && <Error>Something went wrong...</Error>}
+          {error && <Error>Error occured... Try again</Error>}
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
           <Link>CREATE A NEW ACCOUNT</Link>
         </Form>
