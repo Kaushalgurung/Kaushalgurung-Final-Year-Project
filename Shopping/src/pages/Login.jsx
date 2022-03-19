@@ -62,9 +62,9 @@ const Link = styled.a`
   text-decoration: underline;
   cursor: pointer;
 `;
-const Error = styled.span`
-  color: red;
-`;
+// const Error = styled.span`
+//   color: red;
+// `;
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -89,7 +89,7 @@ const Login = () => {
             type="password"
             onChange={(e) => setPassword(e.target.value)} />
           <Button onClick={handleClick} disabled={isFetching}>LOGIN</Button>
-          {error && <Error>Error occured... Try again</Error>}
+          {/* {error && <Error>Error occured... Try again</Error>} */}
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
           <Link>CREATE A NEW ACCOUNT</Link>
         </Form>

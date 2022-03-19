@@ -45,12 +45,12 @@ export default function PharmacyList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/pharmacy/" + params.row.id}>
+            <Link to={"/pharmacy/" + params.row._id}>
               <button className="pharmacyListEdit">Edit</button>
             </Link>
             <DeleteOutline
               className="pharmacyListDelete"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleDelete(params.row._id)}
             />
           </>
         );

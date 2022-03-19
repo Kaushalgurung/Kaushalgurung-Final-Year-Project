@@ -1,7 +1,7 @@
 import Sidebar from "./components/sidebar/sidebar";
 import Topbar from "./components/topbar/Topbar";
 import "./app.css";
-import Home from "./pages/home/home";
+import Home from "./pages/home/Home";
 import UserList from "./pages/userList/userList";
 import User from "./pages/user/user"
 import NewUser from "./pages/newUser/newUser";
@@ -11,7 +11,7 @@ import NewProduct from "./pages/newProduct/newProduct";
 import NewPharmacy from "./pages/newPharmacy/newPharmacy"
 import Pharmacy from "./pages/pharmacy/pharmacy";
 import PharmacyList from "./pages/pharmacyList/pharmacyList";
-import Login from "./pages/login/Login";
+// import Login from "./pages/login/Login";
 import { useSelector } from "react-redux";
 import {
   BrowserRouter,
@@ -20,11 +20,13 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const admin = true;
+  const admin = useSelector((state) => state.user.currentUser.isAdmin);
   return (
     <BrowserRouter>
+    {admin &&(
+      <>
       <Topbar />
-      <div className="container">
+      <div className="container"> 
         <Sidebar />
         <Routes>
         <Route exact path="/" element={<Home />}className="link" />
@@ -36,9 +38,11 @@ function App() {
         <Route path="/newproduct" element={<NewProduct />} className="link"/>
         <Route path="/newpharmacy" element={<NewPharmacy />} className="link"/>
         <Route path="/pharmacy/:pharmacyId" element={<Pharmacy />} className="link"/>
-        <Route path="/pharmacys" element={<PharmacyList />} className="link"/>      
+        <Route path="/pharmacys" element={<PharmacyList />} className="link"/>
           </Routes>
       </div>
+      </>)
+    }
     </BrowserRouter>
   );
 }

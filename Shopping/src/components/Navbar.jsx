@@ -75,11 +75,11 @@ const Navbar = () => {
                     <Search style={{color:"none", fontSize:25}}/> 
                 </SearchContaioner>
                 </Left>
-                <Center><Logo> <Link to="/">औशधि पसल</Link></Logo></Center>
+                <Center><Logo> <Link to="/" style={{color: "inherit"}}>औशधि पसल</Link></Logo></Center>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SIGN IN</MenuItem>
-                    <Link to="/cart">
+                    <Link to="/cart" style={{color: "inherit"}}>
                     <MenuItem>
                         <Badge badgeContent={quantity} color="primary">
                             <ShoppingCartOutlined />

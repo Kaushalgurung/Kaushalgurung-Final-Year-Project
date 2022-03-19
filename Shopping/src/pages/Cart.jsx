@@ -44,11 +44,6 @@ const TopButton = styled.button`
 const TopTexts = styled.div`
   ${mobile({ display: "none" })}
 `;
-const TopText = styled.span`
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0px 10px;
-`;
 
 const Bottom = styled.div`
   display: flex;
@@ -86,15 +81,6 @@ const Details = styled.div`
 const ProductName = styled.span``;
 
 const ProductId = styled.span``;
-
-const ProductColor = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-`;
-
-const ProductSize = styled.span``;
 
 const PriceDetail = styled.div`
   flex: 1;
@@ -169,21 +155,24 @@ const Cart = () => {
    const onToken = (token) => {
     setStripeToken(token);
   };
+  console.log(stripeToken)
 /* This is a useEffect hook that makes a request to the server to create a payment intent. */
-  useEffect(() => {
-    const makeRequest = async () => {
-      try {
-        const res = await userRequest.post("/checkout/payment", {
-          tokenId: stripeToken.id,
-          amount: (cart.total*100)*0.0082,
-        });
-        navigate.push("/success", {
-          stripeData: res.data,
-          products: cart, });
-      } catch {}
-    };
-    stripeToken && makeRequest();
-  }, [stripeToken, (cart.total*100)*0.0082, navigate]);
+useEffect(() => {
+  const makeRequest = async () => {
+    try {
+      const res = await userRequest.post("/checkout/payment", {
+        tokenId: stripeToken.id,
+        amount: (cart.total*100)*0.0082,
+      });
+      navigate.go("/success", {
+        stripeData: res.data,
+        products: cart, });
+    } catch {
+      console.log("error in loading success page.");
+    }
+  };
+  stripeToken && makeRequest();
+}, [stripeToken,(cart.total*100)*0.0082, navigate]);
   return (
     <Container>
       <Navbar />

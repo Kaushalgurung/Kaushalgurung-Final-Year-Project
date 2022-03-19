@@ -16,6 +16,7 @@ const Login = () => {
     <div
       style={{
         height: "100vh",
+        width: "100vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
